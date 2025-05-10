@@ -1,2 +1,5 @@
 Flask
 Gunicorn
+flask-sqlalchemy
+python-dotenv
+flask-migrate
