@@ -3,3 +3,4 @@ Gunicorn
 flask-sqlalchemy
 python-dotenv
 flask-migrate
+pymysql
