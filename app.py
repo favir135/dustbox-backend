@@ -37,9 +37,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
 
-migrate = Migrate(app, db)
-
-
 @app.route("/count", methods=["GET"])
 def count():
   counter = AccessCounter.query.get(1)
