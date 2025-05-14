@@ -21,7 +21,7 @@ app = Flask(__name__)
 
 # SQLAlchemy用のDB URI設定
 app.config['SQLALCHEMY_DATABASE_URI'] = (
-    f"postgresql://postgres.{os.getenv("POOLER_TOKEN")}:{os.getenv('DB_PASSWORD')}"
+    f"postgresql://postgres.{os.getenv('POOLER_TOKEN')}:{os.getenv('DB_PASSWORD')}"
     f"@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres"
 )
 
