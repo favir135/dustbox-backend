@@ -2,4 +2,4 @@ Flask
 Gunicorn
 flask-sqlalchemy
 python-dotenv
-pymysql
+psycopg2
