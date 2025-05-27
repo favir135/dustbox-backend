@@ -5,12 +5,13 @@ from flask_cors import CORS
 import os
 from dotenv import load_dotenv
 
-from model import db, AC_Model 
+from model import db, AC_Model
 load_dotenv()
 
 app = Flask(__name__)
 
 CORS(app, origins=["https://favir135.github.io"])
+
 
 @app.route('/')
 def hello_world():
@@ -18,8 +19,6 @@ def hello_world():
 
 
 load_dotenv()
-
-app = Flask(__name__)
 
 # SQLAlchemy用のDB URI設定
 app.config['SQLALCHEMY_DATABASE_URI'] = (
