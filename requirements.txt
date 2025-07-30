@@ -1,6 +1,6 @@
 Flask
 Gunicorn
-flask-sqlalchemy
+sqlalchemy
 python-dotenv
-psycopg2
 flask-cors
+mysqlclient
