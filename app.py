@@ -5,7 +5,7 @@ from flask_cors import CORS
 import os
 
 
-from model import session, AC_Model
+from model import session_class, AC_Model
 
 app = Flask(__name__)
 CORS(app, origins=["https://favir135.github.io"])
@@ -18,6 +18,7 @@ def hello_world():
 
 @app.route("/count", methods=["GET"])
 def count():
+  session = session_class()
   counter = session.query(AC_Model).get(1)
 
   if counter is None:
@@ -27,7 +28,9 @@ def count():
     counter.count += 1
 
   session.commit()
-  return jsonify({"count": counter.count})
+  count = counter.count
+  session.close()
+  return jsonify({"count": count})
 
 
 if __name__ == "__main__":
