@@ -10,7 +10,8 @@ from sqlalchemy.orm import sessionmaker, Session, declarative_base
 
 load_dotenv()
 engine = create_engine(
-    f"mysql://{getenv('MYSQL_USER')}:{getenv('MYSQL_PASSWORD')}@{getenv('MYSQL_HOST')}/{getenv('DB_NAME')}")
+    f"mysql://{getenv('MYSQL_USER')}:{getenv('MYSQL_PASSWORD')}@{getenv('MYSQL_HOST')}/{getenv('DB_NAME')}",
+    pool_pre_ping = True)
 
 
 Base = declarative_base()
